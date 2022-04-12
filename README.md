@@ -1,0 +1,1 @@
+# bkai_naver_vietnamese_scene_text
