@@ -1,28 +1,15 @@
 import numpy as np
 
-def process_txt(file_path):
+def process_txt(path):
     """
     Read .txt file and convert the content to Python nested list.
-    :param file_input: Python str containing content of .txt annotation file.
+    :param path: Python str, path to the .txt annotation file.
     :return: Python list of [x1 -> int, y1 -> int, x2 -> int, y2 -> int, x3 -> int, y3 -> int, x4 -> int, y4 -> int, label -> str]
     """
-    with open(file_path, 'r') as f:
+    with open(path, 'r') as f:
         file_input = f.read()
     f.close()
     lines = file_input.split('\n')[:-1]
-    # result = []
-    # for line in lines:
-    #     buffer = ['']
-    #     count = 0
-    #     for i in range(len(line)):
-    #         if line[i] != ',' or i == len(line) - 1:
-    #             buffer[-1] += line[i]
-    #         else:
-    #             count += 1
-    #             if count <= 8:
-    #                 buffer[-1] = int(buffer[-1])
-    #             buffer.append('')
-    #     result.append(buffer)
     lines = [line.split(',') for line in lines]
     result = [[int(_) for _ in line[:8]] + [','.join(line[8:])] for line in lines]
     return result
