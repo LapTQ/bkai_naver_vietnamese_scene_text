@@ -71,7 +71,6 @@ print(word_to_index_mapping)
 gt_path = 'dataset/train_data/training_gt/gt_img_1.txt'
 img_path = str(gt_path).replace('training_gt/gt_img_', 'training_img/img_').replace('.txt', '.jpg')
 image = np.array(Image.open(img_path).convert('RGB'))
-# plt.imshow(image); plt.show()
 boxes = process_txt(gt_path)
 # print(boxes)
 boxes = [[(_ if isinstance(_, int) else word_to_index_mapping[_]) for _ in box] for box in boxes]

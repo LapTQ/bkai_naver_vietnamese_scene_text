@@ -11,3 +11,8 @@ https://aihub.vn/competitions/214#learn_the_details-overview
     * VinText: https://drive.google.com/file/d/1UUQhNvzgpZy7zXBFQp0Qox-BBjunZ0ml/view
     
 * Public test: https://drive.google.com/file/d/1PLW2eGsMSVXZahZ7GvEz5Kr1uvyLnxbx/view
+
+Detect text instance: ABCNet, MaskTextSpotterV3
+
+Recognize that text instance: Bezier  alignment module
+
